@@ -1,5 +1,12 @@
 // Get all image elements
 const IMAGES = document.querySelectorAll('img');
+// Create sizes object
+const SIZES = {
+  showcase: '100vw',
+  reason: '(max-width: 799px) 100vw, 372px',
+  feature: '(max-width: 799px) 100vw, 558px',
+  story: '(max-width: 799px) 100vw, 670px',
+};
 
 // Function to construct responsive image paths
 function makeSrcset(imgSrc) {
@@ -27,5 +34,7 @@ for (let i = 0; i < IMAGES.length; i++) {
 
   let type = IMAGES[i].getAttribute('data-type');
 
-  console.log(type);
+  let sizes = SIZES[type];
+
+  console.log(sizes);
 }
