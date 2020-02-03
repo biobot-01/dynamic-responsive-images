@@ -30,11 +30,11 @@ for (let i = 0; i < IMAGES.length; i++) {
 
   let srcset = makeSrcset(imgSrc);
 
-  console.log(srcset);
+  IMAGES[i].setAttribute('srcset', srcset);
 
   let type = IMAGES[i].getAttribute('data-type');
 
   let sizes = SIZES[type];
 
-  console.log(sizes);
+  IMAGES[i].setAttribute('sizes', sizes);
 }
